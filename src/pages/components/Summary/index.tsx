@@ -1,7 +1,13 @@
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
 import { SummaryContainer, SummaryCard } from './styles';
 
-export function Summary(){
+
+
+import React from 'react';
+
+// import { Container } from './styles';
+
+const Summary: React.FC = () => {
     return (
         <SummaryContainer>
             <SummaryCard>
@@ -28,3 +34,5 @@ export function Summary(){
         </SummaryContainer>
     )
 }
+
+export default Summary;
