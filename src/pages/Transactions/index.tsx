@@ -50,10 +50,7 @@ export function Transactions() {
     ]);
 
     const handleDelete = (id: Number) => {
-        console.log("🚀 ~ file: index.tsx:53 ~ handleDelete ~ id:", id)
-
-        const result = data.indexOf(id)
-        console.log("🚀 ~ file: index.tsx:56 ~ handleDelete ~ result:", result)
+        data.indexOf(id)
         setData(data.slice())
     }
 
