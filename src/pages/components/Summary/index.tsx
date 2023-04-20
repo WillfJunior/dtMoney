@@ -13,7 +13,7 @@ interface IValuesProps {
 // import { Container } from './styles';
 
 const Summary: React.FC<IValuesProps> = (props) => {
-  useEffect(() => {}, [props.values]);
+  useEffect(() => { }, [props.values]);
   const { values } = props;
   return (
     <SummaryContainer>
@@ -31,7 +31,7 @@ const Summary: React.FC<IValuesProps> = (props) => {
         </header>
         <strong>R$ {values.out.replace(",", ".")}</strong>
       </SummaryCard>
-      <SummaryCard variant="green">
+      <SummaryCard variant={parseFloat(values.total) < 0 ? "red" : "green"}>
         <header>
           <span>Total</span>
           <CurrencyDollar size={32} color="#fff" />
