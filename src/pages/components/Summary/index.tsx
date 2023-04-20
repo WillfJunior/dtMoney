@@ -10,7 +10,6 @@ interface ISummaryValues {
 interface IValuesProps {
   values: ISummaryValues;
 }
-// import { Container } from './styles';
 
 const Summary: React.FC<IValuesProps> = (props) => {
   useEffect(() => { }, [props.values]);
