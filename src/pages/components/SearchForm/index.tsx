@@ -1,4 +1,3 @@
-import { MagnifyingGlass } from "phosphor-react";
 import { SearchFormContainer } from "./styles";
 
 interface ISearchProps {
@@ -19,10 +18,6 @@ const SearchForm: React.FC<ISearchProps> = (props) => {
                 onChange={(e) => handleSearch(e.target.value)}
             />
 
-            {/* <button type="submit">
-                <MagnifyingGlass size={20} />
-                Buscar
-            </button> */}
         </SearchFormContainer>
     )
 }

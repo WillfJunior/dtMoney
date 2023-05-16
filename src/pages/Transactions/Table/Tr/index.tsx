@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PriceHighLight } from "../../styles";
 import Td from "../Td";
 import { Trash } from "phosphor-react";
@@ -13,11 +13,14 @@ interface TrReceivedProps {
 }
 interface TrProps {
   data: TrReceivedProps;
+  idx: Number,
   handleDelete: any;
 }
 
 const Tr: React.FC<TrProps> = (props) => {
   const { data } = props;
+
+  useEffect(() => { }, [props.data])
   return (
     <tr key={data.id}>
       <td width="40%">{data.title}</td>
@@ -32,7 +35,7 @@ const Tr: React.FC<TrProps> = (props) => {
         <Trash
           size={22}
           color="red"
-          onClick={() => props.handleDelete(data.id)}
+          onClick={() => props.handleDelete(props.idx)}
         />
       </td>
     </tr>

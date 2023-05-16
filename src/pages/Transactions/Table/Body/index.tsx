@@ -4,6 +4,7 @@ import Tr from '../Tr';
 
 interface TRProps {
     data: TBodyProps[],
+
     get: string
     handleDelete: any
 }
@@ -18,15 +19,13 @@ interface TBodyProps {
 }
 
 
+
 const Body: React.FC<TRProps> = (props) => {
     const { data } = props
-
-
-
     return (
         <tbody >
             {data.map((item, idx) => (
-                <Tr data={item} key={idx} handleDelete={props.handleDelete} />
+                <Tr data={item} key={idx} idx={idx} handleDelete={props.handleDelete} />
 
             ))}
         </tbody>

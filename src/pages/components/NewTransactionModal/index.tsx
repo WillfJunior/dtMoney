@@ -15,6 +15,8 @@ import {
   ArrowDown
 } from 'phosphor-react';
 import _ from 'loadsh'
+import React, { useState } from 'react';
+import ToastAlert from "../Toast";
 
 
 interface IDataProps {
@@ -22,9 +24,6 @@ interface IDataProps {
   data: any,
   open: any
 }
-
-import React, { useState } from 'react';
-
 
 const NewTransactionModal: React.FC<IDataProps> = (props) => {
   const [title, setTitle] = useState('')
@@ -46,6 +45,8 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
     }])
     props.open()
 
+    return <ToastAlert open={true} />
+
   }
 
   const handlInOrOutCome = (value: string) => {
@@ -61,7 +62,6 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
         <CloseButton >
           <X size={24} />
         </CloseButton>
-
         <form onSubmit={handleData}>
           <input
             type="text"

@@ -20,7 +20,6 @@ interface IItemProps {
 const TableTransaction: React.FC<ISearchProps> = (props) => {
 
     useEffect(() => {
-        console.log(props.get)
     }, [props.data])
 
     const filter = props.get.length > 0 ? props.data.filter((item: IItemProps) =>
