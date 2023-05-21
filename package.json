@@ -7,7 +7,7 @@
     "hooks": {
       "pre-commit": "echo 'testando o pre-commit'"
     }
-  }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
