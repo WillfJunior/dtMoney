@@ -71,13 +71,13 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
             placeholder="Preço"
             required />
           {/* <Select.Root>
-            <Select.Trigger className="SelectTrigger" aria-label="Food">
-              <Select.Value placeholder="Select a fruit…" />
-              <Select.Icon className="SelectIcon">
-                <ArrowDown />
-              </Select.Icon>
-            </Select.Trigger>
-          </Select.Root> */}
+              <Select.Trigger className="SelectTrigger" aria-label="Food">
+                <Select.Value placeholder="Select a fruit…" />
+                <Select.Icon className="SelectIcon">
+                  <ArrowDown />
+                </Select.Icon>
+              </Select.Trigger>
+            </Select.Root> */}
           <input
             type="text"
             onChange={(e) => setType(e.target.value)}
