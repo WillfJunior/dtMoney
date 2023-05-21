@@ -1,6 +1,4 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import * as RadioGroup from '@radix-ui/react-radio-group'
-import * as Select from '@radix-ui/react-select';
 import {
   CloseButton,
   Content,
@@ -12,7 +10,6 @@ import {
   ArrowCircleUp,
   X,
   ArrowCircleDown,
-  ArrowDown
 } from 'phosphor-react';
 import _ from 'loadsh'
 import React, { useState } from 'react';

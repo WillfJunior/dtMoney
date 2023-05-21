@@ -1,6 +1,5 @@
 import React from 'react';
 import * as Toast from '@radix-ui/react-toast';
-// import { Container } from './styles';
 
 import './styles.css';
 
