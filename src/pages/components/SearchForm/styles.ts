@@ -42,3 +42,9 @@ export const SearchFormContainer = styled.form`
     }
 
 `
+
+export const FilterMonthContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: transparent; 
+`

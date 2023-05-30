@@ -16,7 +16,10 @@ interface IItemProps {
 }
 
 export function Transactions() {
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState({
+        text: '',
+        month: ''
+    });
     const [data, setData] = useState([]);
 
     const handleDelete = (id: any) => {

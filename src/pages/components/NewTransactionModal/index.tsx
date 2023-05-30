@@ -14,6 +14,7 @@ import {
 import _ from 'loadsh'
 import React, { useState } from 'react';
 import ToastAlert from "../Toast";
+import FilterMonth from "../FilterMonth";
 
 
 interface IDataProps {
@@ -70,14 +71,7 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Preço"
             required />
-          {/* <Select.Root>
-              <Select.Trigger className="SelectTrigger" aria-label="Food">
-                <Select.Value placeholder="Select a fruit…" />
-                <Select.Icon className="SelectIcon">
-                  <ArrowDown />
-                </Select.Icon>
-              </Select.Trigger>
-            </Select.Root> */}
+          {/* <FilterMonth /> */}
           <input
             type="text"
             onChange={(e) => setType(e.target.value)}

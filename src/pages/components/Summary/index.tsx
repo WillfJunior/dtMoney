@@ -1,6 +1,7 @@
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
 import { SummaryContainer, SummaryCard } from "./styles";
 import React, { useEffect } from "react";
+import FilterMonth from "../FilterMonth";
 
 interface ISummaryValues {
   entrance: string;
