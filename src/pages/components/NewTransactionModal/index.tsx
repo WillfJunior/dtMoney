@@ -1,6 +1,4 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import * as RadioGroup from '@radix-ui/react-radio-group'
-import * as Select from '@radix-ui/react-select';
 import {
   CloseButton,
   Content,
@@ -12,9 +10,11 @@ import {
   ArrowCircleUp,
   X,
   ArrowCircleDown,
-  ArrowDown
 } from 'phosphor-react';
 import _ from 'loadsh'
+import React, { useState } from 'react';
+import ToastAlert from "../Toast";
+import FilterMonth from "../FilterMonth";
 
 
 interface IDataProps {
@@ -22,9 +22,6 @@ interface IDataProps {
   data: any,
   open: any
 }
-
-import React, { useState } from 'react';
-
 
 const NewTransactionModal: React.FC<IDataProps> = (props) => {
   const [title, setTitle] = useState('')
@@ -46,6 +43,8 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
     }])
     props.open()
 
+    return <ToastAlert open={true} />
+
   }
 
   const handlInOrOutCome = (value: string) => {
@@ -61,7 +60,6 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
         <CloseButton >
           <X size={24} />
         </CloseButton>
-
         <form onSubmit={handleData}>
           <input
             type="text"
@@ -73,14 +71,7 @@ const NewTransactionModal: React.FC<IDataProps> = (props) => {
             onChange={(e) => setPrice(e.target.value)}
             placeholder="Preço"
             required />
-          {/* <Select.Root>
-            <Select.Trigger className="SelectTrigger" aria-label="Food">
-              <Select.Value placeholder="Select a fruit…" />
-              <Select.Icon className="SelectIcon">
-                <ArrowDown />
-              </Select.Icon>
-            </Select.Trigger>
-          </Select.Root> */}
+          {/* <FilterMonth /> */}
           <input
             type="text"
             onChange={(e) => setType(e.target.value)}
